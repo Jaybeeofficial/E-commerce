@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout - SafeWay Delivery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; margin: 0; color: #333; background: #fff; }
+        .checkout-layout { display: flex; max-width: 1100px; margin: 0 auto; min-height: 100vh; }
+        
+        /* LEFT SIDE: Order Summary */
+        .order-summary { flex: 1.2; padding: 40px; border-right: 1px solid #f0f0f0; background: #fafafa; }
+        .return-link { color: #000; text-decoration: none; font-size: 14px; display: block; margin-bottom: 40px; }
+        .pay-label { color: #666; font-size: 14px; margin-bottom: 5px; }
+        .main-total { font-size: 38px; font-weight: 600; margin-bottom: 30px; letter-spacing: -1px; }
+        
+        .item-row { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+        .img-container { position: relative; width: 64px; height: 64px; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; border: 1px solid #eee; }
+        .item-badge { position: absolute; top: -8px; right: -8px; background: #666; color: #fff; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: bold; }
+        
+        .price-line { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px; color: #555; }
+        .final-line { display: flex; justify-content: space-between; margin-top: 30px; font-weight: 600; font-size: 18px; color: #000; border-top: 1px solid #eee; padding-top: 20px; }
+
+        /* RIGHT SIDE: Form Sections */
+        .form-section { flex: 1; padding: 40px; }
+        .step { display: none; }
+        .step.active { display: block; }
+
+        h3 { font-size: 16px; font-weight: 500; margin-bottom: 25px; color: #333; }
+        label { display: block; font-size: 13px; color: #666; margin-bottom: 8px; margin-top: 15px; }
+        
+        input, select, textarea { 
+            width: 100%; padding: 14px; border: 1px solid #e0e0e0; border-radius: 4px; 
+            background: #f9f9f9; font-size: 14px; outline: none; box-sizing: border-box;
+        }
+
+        /* Error Styling */
+        input.invalid, textarea.invalid { border: 1px solid #ff4d4d !important; background-color: #fff5f5 !important; }
+        .error-msg { color: #ff4d4d; font-size: 11px; margin-top: 4px; display: none; font-weight: 500; }
+
+        .shipping-option-box { 
+            padding: 15px; border: 1px solid #3b82f6; border-radius: 4px; 
+            background: #fff; display: flex; justify-content: space-between; font-size: 14px;
+        }
+
+        .important-note { 
+            font-size: 12px; color: #444; margin-top: 20px; line-height: 1.5; 
+            background: #fff5f5; padding: 12px; border-radius: 4px; border-left: 4px solid #ff4d4d;
+        }
+
+        .blue-btn { 
+            width: 100%; background: #3b82f6; color: white; border: none; padding: 18px; 
+            border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 30px; 
+        }
+
+        @media (max-width: 800px) { .checkout-layout { flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+<div class="checkout-layout">
+    <div class="order-summary">
+        <a href="index.html" class="return-link">← Return to store</a>
+        <div class="pay-label">Pay carlos delivery</div>
+        <div class="main-total" id="topTotal">₦0.00</div>
+
+        <div id="itemList"></div>
+
+        <div style="display: flex; gap: 10px; margin: 30px 0;">
+            <input type="text" placeholder="Enter discount code" style="background:#fff;">
+            <button style="background:#eee; border:none; padding:0 20px; border-radius:4px; color:#999; font-weight:bold;">Apply</button>
+        </div>
+
+        <div class="price-line"><span>Subtotal</span><span id="subtotal">₦0.00</span></div>
+        <div class="price-line"><span>Shipping</span><span>₦6000.00</span></div>
+        <div class="final-line"><span>Total</span><span id="finalTotal">₦0.00</span></div>
+    </div>
+
+    <div class="form-section">
+        
+        <div class="step active" id="step1">
+            <h3>Shipping information</h3>
+            <label>Shipping destination</label>
+            <select><option>Nigeria</option></select>
+            
+            <label>Shipping option</label>
+            <div class="shipping-option-box">
+                <span>expendite shipping 2</span>
+                <strong>₦6000.00</strong>
+            </div>
+            <button class="blue-btn" onclick="goToStep(2)">Continue</button>
+        </div>
+
+        <div id="step2" class="step">
+            <p style="font-size: 13px; color: #666; cursor: pointer; margin-bottom: 20px;" onclick="goToStep(1)">← Return to shipping destination</p>
+            
+            <label>Full name</label>
+            <input type="text" id="custName" placeholder="Your full name">
+            <div id="nameError" class="error-msg">Please enter your full name</div>
+
+            <label>Email</label>
+            <input type="email" id="custEmail" placeholder="Your email address">
+            <div id="emailError" class="error-msg">Email is required for updates</div>
+
+            <label>Address</label>
+            <input type="text" id="custAddress" placeholder="Your street address">
+            <div id="addressError" class="error-msg">Shipping address is required</div>
+
+            <div style="display: flex; gap: 15px;">
+                <div style="flex: 1;">
+                    <label>City</label>
+                    <input type="text" id="custCity" placeholder="Your city">
+                    <div id="cityError" class="error-msg">City required</div>
+                </div>
+                <div style="flex: 1;">
+                    <label>Postal code</label>
+                    <input type="text" id="custPost" placeholder="Postal code">
+                </div>
+            </div>
+
+            <label>Phone number</label>
+            <div style="display: flex; gap: 10px;">
+                <div style="width: 80px; display: flex; align-items: center; background: #f9f9f9; border: 1px solid #e0e0e0; padding-left: 10px; border-radius: 4px;">
+                    <img src="https://flagcdn.com/w20/ng.png" width="20">
+                </div>
+                <input type="text" id="custPhone" placeholder="Your phone number">
+            </div>
+            <div id="phoneError" class="error-msg">Phone number is required</div>
+
+            <div class="important-note">
+                <strong>very important!!</strong> pls put your own personal email in the place provided... dont put the recivers email.
+            </div>
+
+            <label>Comment</label>
+            <textarea id="custComment" rows="3" placeholder="Optional comments"></textarea>
+
+            <button class="blue-btn" onclick="goToStep(3)">Continue</button>
+        </div>
+
+        <div id="step3" class="step">
+            <p style="font-size: 13px; color: #666; cursor: pointer; margin-bottom: 20px;" onclick="goToStep(2)">← Return to contact information</p>
+            <h3>Payment method</h3>
+            <div style="border: 1px solid #ddd; padding: 25px; border-radius: 8px; background: #fff;">
+                <p style="margin-top: 0; font-weight: 600; font-size: 15px;">Message on Whatsapp</p>
+                <p style="font-size: 13px; color: #555; line-height: 1.6;">
+                    message on whatsapp <strong>+2349063479568</strong> for payment instructions.
+                </p>
+            </div>
+            <button class="blue-btn" id="placeOrderBtn">Place an order</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const OWNER_PHONE = "2349029439036";
+
+// Load Cart Data
+function loadData() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const container = document.getElementById("itemList");
+    let sub = 0;
+
+    container.innerHTML = "";
+    cart.forEach(item => {
+        sub += item.price * item.quantity;
+        container.innerHTML += `
+            <div class="item-row">
+                <div class="img-container"><img src="${item.image}"><div class="item-badge">${item.quantity}</div></div>
+                <div style="flex:1; font-size:14px;">${item.name}</div>
+                <div style="font-weight:600; font-size:14px;">₦${(item.price * item.quantity).toLocaleString()}.00</div>
+            </div>`;
+    });
+
+    const total = sub + 6000;
+    document.getElementById("topTotal").innerText = `₦${total.toLocaleString()}.00`;
+    document.getElementById("subtotal").innerText = `₦${sub.toLocaleString()}.00`;
+    document.getElementById("finalTotal").innerText = `₦${total.toLocaleString()}.00`;
+}
+
+// Navigation + Validation
+function goToStep(num) {
+    if (num === 3) {
+        if (!validateForm()) return; 
+    }
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    document.getElementById('step' + num).classList.add('active');
+    window.scrollTo(0, 0);
+}
+
+function validateForm() {
+    let valid = true;
+    const checks = [
+        { id: 'custName', err: 'nameError' },
+        { id: 'custEmail', err: 'emailError' },
+        { id: 'custAddress', err: 'addressError' },
+        { id: 'custCity', err: 'cityError' },
+        { id: 'custPhone', err: 'phoneError' }
+    ];
+
+    checks.forEach(item => {
+        const input = document.getElementById(item.id);
+        const error = document.getElementById(item.err);
+        if (!input.value.trim()) {
+            input.classList.add('invalid');
+            error.style.display = 'block';
+            valid = false;
+        } else {
+            input.classList.remove('invalid');
+            error.style.display = 'none';
+        }
+    });
+    return valid;
+}
+
+// --- NEW CODE: CLEAR ERRORS ON TYPING ---
+const fieldsToWatch = [
+    { id: 'custName', err: 'nameError' },
+    { id: 'custEmail', err: 'emailError' },
+    { id: 'custAddress', err: 'addressError' },
+    { id: 'custCity', err: 'cityError' },
+    { id: 'custPhone', err: 'phoneError' }
+];
+
+fieldsToWatch.forEach(field => {
+    const input = document.getElementById(field.id);
+    const error = document.getElementById(field.err);
+
+    input.addEventListener('input', () => {
+        if (input.value.trim().length > 0) {
+            input.classList.remove('invalid');
+            if(error) error.style.display = 'none';
+        }
+    });
+});
+// ----------------------------------------
+
+document.getElementById("placeOrderBtn").onclick = () => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const name = document.getElementById("custName").value;
+    const address = document.getElementById("custAddress").value;
+    const phone = document.getElementById("custPhone").value;
+    const total = document.getElementById("finalTotal").innerText;
+
+    let itemsText = "";
+    cart.forEach(i => itemsText += `- ${i.name} (x${i.quantity})%0A`);
+
+    const message = `*NEW ORDER RECEIVED*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Address:* ${address}%0A%0A*Items:*%0A${itemsText}%0A*Total:* ${total}`;
+
+    window.open(`https://wa.me/${OWNER_PHONE}?text=${message}`, '_blank');
+    localStorage.removeItem("cart");
+    window.location.href = "index.html?order=success";
+};
+
+window.onload = loadData;
+</script>
+</body>
+</html>

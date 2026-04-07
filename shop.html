@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carlos Delivery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  ALL ORDERS GOING TO USA SHOULD PLS CONFIRM THE PRICE ON MY WHATSAPP BEFORE SENDING
+</div>
+
+<!-- NAVBAR -->
+ <header class="header">
+  <div class="nav-box"> 
+
+    
+
+    <div class="logo">
+  <img src="img/planet.jpg" alt="Carlos Delivery">
+  <span class="logo-text">SAFEWAY DELIVERY</span>
+</div>
+
+
+   
+
+
+
+
+
+<!-- HAMBURGER (MOBILE) -->
+    <div class="hamburger" id="hamburger">☰</div>
+
+
+
+     <nav class="menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="shop.html" class="active">Shop</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+
+  
+  <div class="customized">
+    <span class="custom-title">
+      non customized product <span class="arrow">▾</span>
+    </span>
+    <div class="custom-sub">
+      <a href="keys.html">keys</a>
+      <a href="perfumes.html">perfumes</a>
+      <a href="necklaces.html">necklaces</a>
+      <a href="teddybears.html">teddy bears</a>
+      <a href="wristwatches.html">wristwatches</a>
+      <a href="box.html">box sets</a>
+      <a href="flowers.html">flowers</a>
+      <a href="handbags.html">handbags</a>
+      <a href="bracelet.html">bracelets</a>
+      <a href="underwears.html">underwears</a>
+      <a href="rings.html">rings</a>
+    </div>
+  </div>
+
+  
+  
+
+    <div class="customized">
+  <span class="custom-title">
+    customized product <span class="arrow">▾</span>
+  </span>
+
+  <div class="custom-sub">
+    <a href="letter.html">letter</a>
+    <a href="customizedbracelet.html">customized bracelets</a>
+    <a href="document.html">cards and documents</a>
+    <a href="caps.html">caps</a>
+    <a href="customizednecklaces.html">customized necklaces</a>
+    <a href="frame.html">frame</a>
+    <a href="pillow.html">pillow and blankets</a>
+    <a href="polo.html">polo</a>
+    <a href="mug.html">mug</a>
+  </div>
+</div>
+
+<div class="custom-menu-links"> 
+  <a href="eatable.html">eatable</a>
+  <a href="vip.html">vip</a>
+</div>
+
+   
+</nav>  
+
+
+
+
+
+
+  <div class="cart" id="openCart" style="position: relative; cursor: pointer;">
+  <svg
+    width="30"
+    height="30"
+    viewBox="0 0 24 24"
+    fill="black"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M6 6V5a6 6 0 0 1 12 0v1h3l-1.5 16.5a2 2 0 0 1-2 1.5H6.5a2 2 0 0 1-2-1.5L3 6h3zm2 0h8V5a4 4 0 0 0-8 0v1z"/>
+  </svg>
+  <span id="cartCount" class="cart-badge">0</span>
+</div>
+
+
+
+
+  </div>
+
+  <!-- Overlay -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+  
+  <div class="cart-header">
+    <h2>Shopping bag</h2>
+    <button class="close-cart" id="closeCart">&times;</button>
+  </div>
+
+  <!-- <div class="cart-body" id="cartBody">
+    <p class="empty-text">Shopping bag is empty</p>
+  </div> -->
+  <div class="cart-body" id="cartBody">
+    <p class="empty-text">Shopping bag is empty</p>
+</div>
+<div class="cart-footer" style="padding: 20px; border-top: 1px solid #eee;">
+    <h3>Total: <span id="cartTotal">0.00</span></h3>
+</div>
+<button id="checkoutBtn" style="width: 100%; background-color: #3b82f6; color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      Checkout 
+      <i class="fa-solid fa-lock" style="font-size: 12px;"></i>
+    </button>
+    <p style="text-align: center; font-size: 12px; color: #888; margin-top: 10px;">
+      <i class="fa-solid fa-shield-halved"></i> Secure checkout
+    </p>
+
+</div>
+</header> 
+
+
+<section class="shop-section">
+
+  <div class="products-grid" id="productsGrid">
+    <!-- Products will be inserted by JS -->
+  </div>
+
+  <div class="pagination" id="pagination"></div>
+
+</section>
+
+<section class="predict-section">
+
+  <div class="predict-content">
+    <h1>Predict the future</h1>
+    <p>You didn’t come this far to stop</p>
+    <button>Create it</button>
+  </div>
+
+  <div class="predict-image">
+    <img src="img/Screenshot (740).png" alt="Predict Future">
+  </div>
+
+</section>
+
+
+<section class="testimonial-sections">
+
+  <div class="testimonial-containers">
+
+    <div class="testimonials">
+      <div class="stars">★★★★★</div>
+      <p>
+        Safeway Delivery made my gift shopping easy and fast.
+        Highly recommend for global delivery services!
+      </p>
+
+      <div class="users">
+        <img src="img/Screenshot (743).png" alt="">
+        <span>pablo</span>
+      </div>
+    </div>
+
+    <div class="testimonials">
+      <div class="stars">★★★★★</div>
+      <p>
+        I ordered a beautiful wristwatch, and it arrived on time.
+        Excellent service and quality products!
+      </p>
+
+      <div class="users">
+        <img src="img/Screenshot (744).png" alt="">
+        <span>frank dean</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<a href="https://wa.me/2349063479568" class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+<footer class="footer">
+
+  <div class="footer-top">
+
+    <!-- LEFT -->
+    <div class="footer-col left-col">
+      <h3>Gifts</h3>
+      <p>Delivering joy with global gift items online.</p>
+
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-tiktok"></i>
+      </div>
+
+      <span class="copyright">
+        © 2026. All rights reserved.
+      </span>
+
+      <!-- IMAGE GRID (NOW INSIDE LEFT COLUMN) -->
+      <div class="footer-gallery">
+        <img src="img/Screenshot (173).png">
+        <img src="img/Screenshot (174).png">
+        <img src="img/Screenshot (175).png">
+        <img src="img/Screenshot (176).png">
+        <img src="img/Screenshot (177).png">
+        <img src="img/Screenshot (178).png">
+        <img src="img/Screenshot (179).png">
+        <img src="img/Screenshot (180).png">
+      </div>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="footer-col">
+      <h4>SHOP</h4>
+      <p>+2348159933819</p>
+      <p>+2349029439036</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-col">
+      <h4>GLOBAL</h4>
+      <p>Enter your email address</p>
+
+      <input type="email" placeholder="Your email for updates">
+
+      <button class="footer-btn">
+        Submit your request now
+      </button>
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+
+
+<script src="main.js"></script>
+
+
+
+
+
+<script>
+const products = [
+  {id:1, img:"img/Screenshot (257).png", title:"Designer Hangbag Set", price:"₦85000", badge:"EXCLUSIVE SET"},
+  {id:2, img:"img/Screenshot (187).png", title:"Plain Handbag Set", price:"₦75000", badge:"NEW ARRIVAL"},
+  {id:3, img:"img/Screenshot (185).png", title:"Chic Handbag", price:"₦78000", badge:"NEW ARRIVAL"},
+  {id:4, img:"img/Screenshot (188).png", title:"Fashion Handbag", price:"₦65000", badge:"LIMITED EDITION"},
+  {id:5, img:"img/Screenshot (189).png", title:"Elegant Handbag", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:6, img:"img/Screenshot (190).png", title:"White Quilted Handbag", price:"₦62000", badge:"NEW ARRIVAL"},
+  {id:7, img:"img/Screenshot (191).png", title:"Ladies Handbag", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:8, img:"img/Screenshot (192).png", title:"Quilted Handbag", price:"₦59000", badge:"BEST SELLER"},
+  {id:9, img:"img/Screenshot (193).png", title:"Handbag Set", price:"₦80000", badge:"NEW ARRIVAL"},
+  {id:10, img:"img/Screenshot (195).png", title:"Handbag", price:"₦75000", badge:"NEW ARRIVAL"},
+  {id:11, img:"img/Screenshot (196).png", title:"Women Handbag", price:"₦70000", badge:"NEW ARRIVAL"},
+  {id:12, img:"img/Screenshot (197).png", title:"Moissante GemStone", price:"₦125000", badge:"CERTIFIED QUALITY"},
+  {id:13, img:"img/Screenshot (198).png", title:"Gold Necklace with Teardrop Diamond Pendant", price:"₦220000", badge:"NEW ARRIVAL"},
+  {id:14, img:"img/Screenshot (199).png", title:"Marquise Cut Moissante Ring", price:"₦370000", badge:"HAND-CRAFTED"},
+  {id:15, img:"img/Screenshot (248).png", title:"Elegant Diamond Ring Set", price:"₦150000", badge:"NEW ARRIVAL"},
+  {id:16, img:"img/Screenshot (200).png", title:"Love Necklace Gift Set", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:17, img:"img/Screenshot (201).png", title:"Blue Heart-Shaped Gift Set", price:"₦100000", badge:"NEW ARRIVAL"},
+  {id:18, img:"img/Screenshot (202).png", title:"Gift Box Set", price:"₦75000", badge:"NEW ARRIVAL"},
+  {id:19, img:"img/Screenshot (203).png", title:"Blue Sapphire Jewelry Set", price:"₦68000", badge:"NEW ARRIVAL"},
+  {id:20, img:"img/Screenshot (204).png", title:"Luxury Silver Watch", price:"₦85000", badge:"ON SALE"},
+  {id:21, img:"img/Screenshot (205).png", title:"House Key", price:"₦60000", badge:"VINTAGE APPEAL"},
+  {id:22, img:"img/Screenshot (206).png", title:"Luxury Diamond Watch", price:"₦60000", badge:"EXCLUSIVE"},
+  {id:23, img:"img/Screenshot (207).png", title:"Elegant Gold and Black Watch", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:24, img:"img/Screenshot (208).png", title:"Artificial Floral Arrangement", price:"₦65000", badge:"HANDCRAFTED"},
+  {id:25, img:"img/Screenshot (209).png", title:"Heart-Shaped Sterling Silver Necklace", price:"₦60000", badge:"BEST SELLER"},
+  {id:26, img:"img/Screenshot (210).png", title:"Camuoflage cap", price:"₦65000", badge:"BEST SELLER"},
+  {id:27, img:"img/Screenshot (211).png", title:"House Key", price:"₦60000", badge:"BEST SELLER"},
+  {id:28, img:"img/Screenshot (212).png", title:"Artificial Rose Bouquet (35000 with flower vex)", price:"₦60000", badge:"ELEGANT DECOR"},
+  {id:29, img:"img/Screenshot (301).png", title:"customized LED Acrylic Night Lamp", price:"₦40000", badge:"ROMANTIC GIFT"},
+  {id:30, img:"img/Screenshot (151).png", title:"letter with envelop (doest have tracking number)", price:"₦35000", badge:"CUSTOMIZABLE"},
+  {id:31, img:"img/Screenshot (213).png", title:"Customized Document Services (send your document on watsapp)", price:"₦75000", badge:"EXCLUSIVE"},
+  {id:32, img:"img/Screenshot (214).png", title:"Custom Engraved Bracelet", price:"₦60000", badge:"HAND-MADE"},
+  {id:33, img:"img/Screenshot (216).png", title:"Personalized Name Bracelet", price:"₦60000", badge:"PERSONALIZED-GIFT"},
+  {id:34, img:"img/Screenshot (217).png", title:"Customized Gold Bracelet", price:"₦50000", badge:"HAND-MADE"},
+  {id:35, img:"img/Screenshot (218).png", title:"Custom Engraved Bracelet", price:"₦61000", badge:"HANDCRAFTED"},
+  {id:36, img:"img/Screenshot (219).png", title:"Gold Cross Bracelet", price:"₦45000", badge:"ELEGANT DESIGN"},
+  {id:37, img:"img/Screenshot (220).png", title:"Sapphire and Diamond Bracelet", price:"₦40000", badge:"EXCLUSIVE"},
+  {id:38, img:"img/Screenshot (221).png", title:"Heart and Crystal Bracelet", price:"₦35000", badge:"NEW ARRIVAL"},
+  {id:39, img:"img/Screenshot (222).png", title:"Elegant Silver Charm Bracelets", price:"₦36000", badge:"NEW ARRIVAL"},
+  {id:40, img:"img/Screenshot (223).png", title:"Elegant Gold and Green Bracelet Set", price:"₦38700", badge:"NEW ARRIVAL"},
+  {id:41, img:"img/Screenshot (224).png", title:"Elegant Blue Gemstone Bracelet", price:"₦38000", badge:"NEW ARRIVAL"},
+  {id:42, img:"img/Screenshot (225).png", title:"Gold Plated Bracelet", price:"₦35000", badge:"LUXURIOUS GIFT"},
+  {id:43, img:"img/Screenshot (226).png", title:"Elegant Diamond Bracelet", price:"₦39000", badge:"NEW ARRIVAL"},
+  {id:44, img:"img/Screenshot (227).png", title:"Elegant Butterfly Bracelet", price:"₦35000", badge:"NEW ARRIVAL"},
+  {id:45, img:"img/Screenshot (228).png", title:"Elegant Pearl Bracelet Set", price:"₦37000", badge:"HANDMADE LUXURY"},
+  {id:46, img:"img/Screenshot (229).png", title:"Elegant Gold Bracelet", price:"₦35000", badge:"NEW ARRIVAL"},
+  {id:47, img:"img/Screenshot (231).png", title:"Elegant Gold Bracelet", price:"₦35000", badge:"NEW ARRIVAL"},
+  {id:48, img:"img/Screenshot (232).png", title:"Sparkling Gem Bracelet", price:"₦35000", badge:"NEW ARRIVAL"},
+  {id:49, img:"img/Screenshot (233).png", title:"Men's Sleeveless Tank Tops set 5", price:"₦45000", badge:"NEW ARRIVAL"},
+  {id:50, img:"img/Screenshot (234).png", title:"Men's Patterned boxer Shorts", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:51, img:"img/Screenshot (163).png", title:"Lace Lingerie Set", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:52, img:"img/Screenshot (235).png", title:"Colorful Women's Ribbed Underwear 5 set", price:"₦53000", badge:"NEW ARRIVAL"},
+  {id:53, img:"img/Screenshot (236).png", title:"Ladies' Lace Trim Panties Set 5ps", price:"₦56000", badge:"NEW ARRIVAL"},
+  {id:54, img:"img/Screenshot (237).png", title:"House Key", price:"₦60000", badge:"PREMIUM QUALITY"},
+  {id:55, img:"img/Screenshot (238).png", title:"Ford Car Remote Key", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:56, img:"img/Screenshot (239).png", title:"chevrolet Car Key (other model can dm me on whatsapp)", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:57, img:"img/Screenshot (240).png", title:"Tesla Model 3/Y Car Key Card (need other model message on whatsapp)", price:"₦120000", badge:"NEW ARRIVAL"},
+  {id:58, img:"img/Screenshot (241).png", title:"BMW Car Key (DM on whatsapp for other model)", price:"₦75000", badge:"NEW ARRIVAL"},
+  {id:59, img:"img/Screenshot (242).png", title:"Tesla Model 3/Y Key", price:"₦150000", badge:"NEW ARRIVAL"},
+  {id:60, img:"img/Screenshot (244).png", title:"Mercedes-Benz Key ( you can dm on whatsapp for other model)", price:"₦65000", badge:"GENUINE"},
+  {id:61, img:"img/Screenshot (213).png", title:"Customized Letter Or Document Content | House document, Marriage Certificate, Car documents, Hospital bill receipts or invoice, any type of document. and shipping (we will create and send )", price:"₦75000", badge:"PREMIUM SERVICE"},
+  {id:62, img:"img/Screenshot (302).png", title:"Fan Card, Student ID card, Access Card PVC plastic ID cards (you will send your design on whatsapp)", price:"₦75000", badge:"NEW ARRIVAL"},
+  {id:63, img:"img/Screenshot (303).png", title:"customized Bitcoin Card plastic", price:"₦75000", badge:"EXCLUSIVE BUNDLE"},
+  {id:64, img:"img/Screenshot (304).png", title:"Fan card Authorization Card", price:"₦75000", badge:"EXCLUSIVE"},
+  {id:65, img:"img/Screenshot (305).png", title:"VIP Membership plastic Card", price:"₦75000", badge:"EXCLUSIVE"},
+  {id:66, img:"img/Screenshot (306).png", title:"customized plastic card with chip", price:"₦75000", badge:"BEST CHOICE"},
+  {id:67, img:"img/Screenshot (307).png", title:"Customized plastic Cryptocurrency Card", price:"₦75000", badge:"PERSONALIZED SERVICE"},
+  {id:68, img:"img/Screenshot (308).png", title:"Customized plastic Membership Card", price:"₦75000", badge:"EXCLUSIVE"},
+  {id:69, img:"img/Screenshot (309).png", title:"Customizable plastic VIP Membership Card with chip", price:"₦75000", badge:"EXCLUSIVE"},
+  {id:70, img:"img/Screenshot (310).png", title:"Bouquet of Red Roses (20 pcs)", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:71, img:"img/Screenshot (311).png", title:"Artificial Christmas Tree ( bigger size and smaller size can dm on whatsapp)", price:"₦75000", badge:"NEW ARRIVAL"},
+  {id:72, img:"img/Screenshot (312).png", title:"Handmade Crochet Flower Bouquet", price:"₦60000", badge:"HAND-MADE"},
+  {id:73, img:"img/Screenshot (313).png", title:"Enchanted Rose in Glass Dome", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:74, img:"img/Screenshot (314).png", title:"Artificial Red Roses Bouquet", price:"₦60000", badge:"HAND-CRAFTED"},
+  {id:75, img:"img/Screenshot (315).png", title:"Artificial Flower Bouquet", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:76, img:"img/Screenshot (316).png", title:"Artificial Rose Bouquet with Teddy Bear", price:"₦75000", badge:"PERFECT GIFT"},
+  {id:77, img:"img/Screenshot (317).png", title:"Decorative Gift Box with Artificial Flowers", price:"₦45000", badge:"NEW ARRIVAL"},
+  {id:78, img:"img/Screenshot (318).png", title:"24K Golden Rose", price:"₦45000", badge:"LUXURIOUS GIFT"},
+  {id:79, img:"img/Screenshot (319).png", title:"Blue Rose Bouquet", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:80, img:"img/Screenshot (320).png", title:"Customizable Necklace (can dm on whatsapp for more customization tips)", price:"₦65000", badge:"PERSONALIZED"},
+  {id:81, img:"img/Screenshot (321).png", title:"Stainless Steel Dog Tag Necklace (can be customized)", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:82, img:"img/Screenshot (322).png", title:"Custom Text Hat", price:"₦52000", badge:"CUSTOMIZABLE"},
+  {id:83, img:"img/Screenshot (323).png", title:"Denim customized Baseball Cap", price:"₦53000", badge:"NEW ARRIVAL"},
+  {id:84, img:"img/Screenshot (164).png", title:"Custom Logo Cap", price:"₦50000", badge:"BEST SELLER"},
+  {id:85, img:"img/Screenshot (324).png", title:"Personalized Christmas Santa Hats", price:"₦56000", badge:"HAND-MADE"},
+  {id:86, img:"img/Screenshot (325).png", title:"Vintage Los Angeles Cap (cannot be customized)", price:"₦55000", badge:"BEST SELLER"},
+  {id:87, img:"img/Screenshot (326).png", title:"Colorful Embroidered Caps", price:"₦54000", badge:"HAND-MADE"},
+  {id:88, img:"img/Screenshot (327).png", title:"Colorful customized Caps", price:"₦56000", badge:"NEW ARRIVAL"},
+  {id:89, img:"img/Screenshot (328).png", title:"Miss Goco Perfume", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:90, img:"img/Screenshot (329).png", title:"SIMIDANG Eau de Toilette Natural Spray", price:"₦40000", badge:"NEW ARRIVAL"},
+  {id:91, img:"img/Screenshot (330).png", title:"Perfume Set", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:92, img:"img/Screenshot (331).png", title:"Jean Miss Perfume Set", price:"₦45000", badge:"NEW ARRIVAL"},
+  {id:93, img:"img/Screenshot (332).png", title:"Luxury Brand 75ml Women's Body Spray Perfume", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:94, img:"img/Screenshot (333).png", title:"Jean Miss Eau de Parfum", price:"₦75000", badge:"NEW ARRIVAL"},
+  {id:95, img:"img/Screenshot (334).png", title:"Ameer Al Arab Perfume", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:96, img:"img/Screenshot (335).png", title:"Luxury Fragrance", price:"₦85000", badge:"NEW ARRIVAL"},
+  {id:97, img:"img/Screenshot (336).png", title:"Ying Xiang 3292 Eau de Toilette", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:98, img:"img/Screenshot (337).png", title:"Brave Man Pour Homme", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:99, img:"img/Screenshot (338).png", title:"Boos Classic Eau de Toilette", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:100, img:"img/Screenshot (339).png", title:"Roxelis Domain Alluring", price:"₦46000", badge:"LUXURIOUS"},
+  {id:101, img:"img/Screenshot (340).png", title:"Jean Miss Pour Homme", price:"₦80000", badge:"NEW ARRIVAL"},
+  {id:102, img:"img/Screenshot (342).png", title:"BOSS Men's Perfume", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:103, img:"img/Screenshot (343).png", title:"Blue De Chncealp", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:104, img:"img/Screenshot (344).png", title:"Jean Miss Homme Perfume Set", price:"₦110000", badge:"NEW ARRIVAL"},
+  {id:105, img:"img/Screenshot (345).png", title:"Dark Brown orchid", price:"₦98000", badge:"NEW ARRIVAL"},
+  {id:106, img:"img/Screenshot (346).png", title:"Drakkar Noir Eau de Toilette", price:"₦70000", badge:"BEST SELLER"},
+  {id:107, img:"img/Screenshot (347).png", title:"Collection of Silver Chains (price varies from the size)", price:"₦85000", badge:"NEW ARRIVAL"},
+  {id:108, img:"img/Screenshot (348).png", title:"Gold Pendant Necklace with custom text and custon photo", price:"₦61000", badge:"NEW ARRIVAL"},
+  {id:109, img:"img/Screenshot (349).png", title:"Heart Pendant Necklace with your photo", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:110, img:"img/Screenshot (350).png", title:"Gold Necklace with 'your name' Pendant", price:"₦64000", badge:"NEW ARRIVAL"},
+  {id:111, img:"img/Screenshot (351).png", title:"Heart Shaped Necklace", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:112, img:"img/Screenshot (352).png", title:"Custom Necklace", price:"₦63000", badge:"HAND-MADE"},
+  {id:113, img:"img/Screenshot (353).png", title:"Custom Photo Locket Necklace", price:"₦60000", badge:"PERSONALIZED GIFT"},
+  {id:114, img:"img/Screenshot (354).png", title:"Vnox Locket Necklaces", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:115, img:"img/Screenshot (355).png", title:"Customized Photo and text necklace", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:116, img:"img/Screenshot (356).png", title:"Silver Chain Necklace men, comes customized with this words", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:117, img:"img/Screenshot (357).png", title:"Heart-Shaped Pendant Necklacecomes customized with this words", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:118, img:"img/Screenshot (358).png", title:"Necklace for men, comes customized with this words", price:"₦60000", badge:"PERFECT GIFT"},
+  {id:119, img:"img/Screenshot (359).png", title:"Customized Photo Locket Necklace (with your photo)", price:"₦67000", badge:"HAND-MADE"},
+  {id:120, img:"img/Screenshot (360).png", title:"Custom Gold Photo Pendant (with your customized photo)", price:"₦65000", badge:"HANDCRAFTED"},
+  {id:121, img:"img/Screenshot (361).png", title:"Personalized Name Necklaces", price:"₦62000", badge:"CUSTOM-MADE"},
+  {id:122, img:"img/Screenshot (362).png", title:"Personalized Name Necklaces", price:"₦55000", badge:"HAND-MADE"},
+  {id:123, img:"img/Screenshot (363).png", title:"Tree of Life Gemstone Necklaces", price:"₦50000", badge:"HAND-MADE"},
+  {id:124, img:"img/Screenshot (364).png", title:"Moon Necklace", price:"₦50000", badge:"HANDCRAFTED"},
+  {id:125, img:"img/Screenshot (365).png", title:"Glow in the Dark Necklace", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:126, img:"img/Screenshot (366).png", title:"Glowing Moon Necklace", price:"₦58500", badge:"NEW ARRIVAL"},
+  {id:127, img:"img/Screenshot (367).png", title:"Infinity Necklace", price:"₦45000", badge:"BEST SELLER"},
+  {id:128, img:"img/Screenshot (368).png", title:"Elegant Floral Pendant Necklaces", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:129, img:"img/Screenshot (369).png", title:"Heart-shaped pink gemstone necklace", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:130, img:"img/Screenshot (370).png", title:"Gold Flower Pendant Necklace", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:131, img:"img/Screenshot (371).png", title:"Glowing Lotus Pendant Necklace", price:"₦66000", badge:"NEW ARRIVAL"},
+  {id:132, img:"img/Screenshot (372).png", title:"Gold Butterfly Necklace", price:"₦57000", badge:"NEW ARRIVAL"},
+  {id:133, img:"img/Screenshot (373).png", title:"Heart-shaped Pink Pendant Necklace", price:"₦70000", badge:"NEW ARRIVAL"},
+  {id:134, img:"img/Screenshot (374).png", title:"Floral Heart Pendant Necklace", price:"₦60500", badge:"NEW ARRIVAL"},
+  {id:135, img:"img/Screenshot (375).png", title:"Glowing Heart Necklace", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:136, img:"img/Screenshot (376).png", title:"Angel Wing Pendant Necklace", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:137, img:"img/Screenshot (377).png", title:"Elegant Teardrop Necklace", price:"₦50500", badge:"NEW ARRIVAL"},
+  {id:138, img:"img/Screenshot (378).png", title:"Heart-shaped Diamond Necklace", price:"₦55500", badge:"NEW ARRIVAL"},
+  {id:139, img:"img/Screenshot (379).png", title:"Gold Necklace with Pink Heart Pendant", price:"₦55500", badge:"NEW ARRIVAL"},
+  {id:140, img:"img/Screenshot (380).png", title:"Guitar Pendant Necklaces", price:"₦55000", badge:"HAND-CRAFTED"},
+  {id:141, img:"img/Screenshot (381).png", title:"Ankh Cross Necklaces", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:142, img:"img/Screenshot (382).png", title:"Leaf Pendant Necklace", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:143, img:"img/Screenshot (383).png", title:"Stainless Steel Cross Pendant", price:"₦55500", badge:"NEW ARRIVAL"},
+  {id:144, img:"img/Screenshot (384).png", title:"Celtic Cross Necklace", price:"₦55500", badge:"NEW ARRIVAL"},
+  {id:145, img:"img/Screenshot (385).png", title:"Stainless Steel Batman Pendant Necklace", price:"₦57000", badge:"BEST SELLER"},
+  {id:146, img:"img/Screenshot (386).png", title:"Gold Cross Necklace", price:"₦50500", badge:"NEW ARRIVAL"},
+  {id:147, img:"img/Screenshot (378).png", title:"Diamond Heart Necklace", price:"₦55500", badge:"LUXURY"},
+  {id:148, img:"img/Screenshot (387).png", title:"Christian Prayer Bullet Pendant Necklace", price:"₦65500", badge:"BEST SELLER"},
+  {id:149, img:"img/Screenshot (388).png", title:"Heart-shaped Blue Gemstone Necklace", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:150, img:"img/Screenshot (389).png", title:"Elegant Silver Jewelry Set", price:"₦65000", badge:"HAND-CRAFTED"},
+  {id:151, img:"img/Screenshot (390).png", title:"Heart Initial Pendant Necklace", price:"₦50500", badge:"NEW ARRIVAL"},
+  {id:152, img:"img/Screenshot (391).png", title:"Elegant Clover Pendant Necklace", price:"₦50500", badge:"NEW ARRIVAL"},
+  {id:153, img:"img/Screenshot (392).png", title:"Heart-Shaped Diamond Necklace", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:154, img:"img/Screenshot (393).png", title:"Elegant Heart-shaped Jewelry Set", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:155, img:"img/Screenshot (394).png", title:"Cross Pendant Necklaces", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:156, img:"img/Screenshot (395).png", title:"Elegant Pendant Necklace", price:"₦50500", badge:"NEW ARRIVAL"},
+  {id:157, img:"img/Screenshot (396).png", title:"Wolf Heart Necklace", price:"₦56000", badge:"HAND MADE"},
+  {id:158, img:"img/Screenshot (397).png", title:"Green Crystal Pendant Necklace", price:"₦55500", badge:"HAND-MADE"},
+  {id:159, img:"img/Screenshot (398).png", title:"Diamond Lightning Bolt Necklace", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:160, img:"img/Screenshot (399).png", title:"Heart-Shaped Pendant Necklace", price:"₦56000", badge:"BEST SELLER"},
+  {id:161, img:"img/Screenshot (400).png", title:"Green Zircon Crystal Pendant Stainless Steel Necklaces Available in different pendant design", price:"₦56000", badge:"NEW ARRIVAL"},
+  {id:162, img:"img/Screenshot (401).png", title:"Heart-shaped Sapphire Pendant Necklace", price:"₦56000", badge:"NEW ARRIVAL"},
+  {id:163, img:"img/Screenshot (402).png", title:"Heart Pendant Necklace with Rose gift box", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:164, img:"img/Screenshot (403).png", title:"Double Layer Star Moon Charm Multilayered Necklace available in gold and silver", price:"₦56000", badge:"NEW ARRIVAL"},
+  {id:165, img:"img/Screenshot (404).png", title:"Heart-Shaped Pendant Necklace", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:166, img:"img/Screenshot (405).png", title:"2pcs Romantic Blue Crystal Butterfly Necklace for Women", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:167, img:"img/Screenshot (406).png", title:"Elegant Teardrop Necklace Available in different colors", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:168, img:"img/Screenshot (407).png", title:"Butterfly Pendant Necklaces", price:"₦56000", badge:"NEW"},
+  {id:169, img:"img/Screenshot (408).png", title:"Gold Pendant Necklace", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:170, img:"img/Screenshot (409).png", title:"Elegant Gold Pendant Necklace", price:"₦50000", badge:"NEW ARRIVAL"},
+  {id:171, img:"img/Screenshot (410).png", title:"Heart Pendant Necklace", price:"₦55500", badge:"NEW ARRIVAL"},
+  {id:172, img:"img/Screenshot (411).png", title:"Cat Heart Pendant Necklace", price:"₦55800", badge:"NEW ARRIVAL"},
+  {id:173, img:"img/Screenshot (379).png", title:"Heart-shaped Pink Crystal Pendant Necklace", price:"₦55000", badge:"BEST SELLER"},
+  {id:174, img:"img/Screenshot (412).png", title:"Vanilla Celebration Cake (same day delivery)", price:"₦86000", badge:"NEW ARRIVAL"},
+  {id:175, img:"img/Screenshot (413).png", title:"Chocolate Cake (same day or next delivery)", price:"₦80000", badge:"HAND-CRAFTED"},
+  {id:176, img:"img/Screenshot (414).png", title:"Carrot Cake (same day or next delivery)", price:"₦75000", badge:"HAND-MADE"},
+  {id:177, img:"img/Screenshot (415).png", title:"Marble Pound Cake (same day or next delivery)", price:"₦100000", badge:"NEW ARRIVAL"},
+  {id:178, img:"img/Screenshot (416).png", title:"Vanilla Cake with Sprinkles", price:"₦86000", badge:"BEST SELLER"},
+  {id:179, img:"img/Screenshot (417).png", title:"Strawberry Cream Cake (same day delivery)", price:"₦90000", badge:"BEST SELLER"},
+  {id:180, img:"img/Screenshot (418).png", title:"Barefoot redwine (sameday delivery)", price:"₦75000", badge:"NEW ARRIVAL"},
+  {id:181, img:"img/Screenshot (419).png", title:"Personal pan pizza with wings and pepsi ….45mins delivery", price:"₦76000", badge:"NEW ARRIVAL"},
+  {id:182, img:"img/Screenshot (420).png", title:"BBQ Chicken Wings", price:"₦46000", badge:"NEW ARRIVAL"},
+  {id:183, img:"img/Screenshot (421).png", title:"Personal Pan pizza …..45mins delivery", price:"₦45000", badge:"BEST SELLER"},
+  {id:184, img:"img/Screenshot (422).png", title:"Custom Photo Print", price:"₦45000", badge:"PERSONALIZED ART"},
+  {id:185, img:"img/Screenshot (423).png", title:"DIY Custom Photo Frame Kit ( this size is 30cm * 40cm )", price:"₦73000", badge:"BEST SELLER"},
+  {id:186, img:"img/Screenshot (424).png", title:"Wooden Photo Frame", price:"₦66000", badge:"NEW ARRIVAL"},
+  {id:187, img:"img/Screenshot (425).png", title:"Personalized Crystal Photo Frame", price:"₦70000", badge:"EXCLUSIVE"},
+  {id:188, img:"img/Screenshot (426).png", title:"High-Quality Layered Prints frame ( comes with either plastic or glass )", price:"₦95000", badge:"BEST SELLER"},
+  {id:189, img:"img/Screenshot (156).png", title:"Custom Printed Photo (30cm*40cm) is the actual size of the frame if you want smaller size or bigger size message on my whatsapp", price:"₦75000", badge:"CUSTOM-MADE"},
+  {id:190, img:"img/Screenshot (427).png", title:"customized canva without frame", price:"₦240000", badge:"NEW ARRIVAL"},
+  {id:191, img:"img/Screenshot (428).png", title:"Custom Canvas Painting (with frame )", price:"₦74000", badge:"HAND-CRAFTED"},
+  {id:192, img:"img/Screenshot (429).png", title:"Plush Teddy Bear", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:193, img:"img/Screenshot (430).png", title:"80cm Giant Teddy Bear available in different colors with free short note", price:"₦120000", badge:"NEW ARRIVAL"},
+  {id:194, img:"img/Screenshot (431).png", title:"9inch Medium size teddy available in different colors with free short note", price:"₦67000", badge:"NEW ARRIVAL"},
+  {id:195, img:"img/Screenshot (432).png", title:"Giant Teddy Bear 5/6ft Tall Human Sized Teddy", price:"₦200000", badge:"NEW ARRIVAL"},
+  {id:196, img:"img/Screenshot (433).png", title:"Plush Teddy Bears 30 CM", price:"₦65000", badge:"BEST SELLER"},
+  {id:197, img:"img/Screenshot (435).png", title:"Minnie Mouse Plush Toy 70cm", price:"₦95000", badge:"BEST SELLER"},
+  {id:198, img:"img/Screenshot (436).png", title:"LED Light-Up Teddy Bears", price:"₦65000", badge:"BEST SELLER"},
+  {id:199, img:"img/Screenshot (437).png", title:"Plush Teddy Bears with Heart Balloons", price:"₦65000", badge:"PERFECT GIFT"},
+  {id:200, img:"img/Screenshot (438).png", title:"Giant Teddy Bear 120 cm", price:"₦240000", badge:"BEST SELLER"},
+  {id:201, img:"img/Screenshot (439).png", title:"Blue Teddy Bear", price:"₦75000", badge:"PERFECT GIFT"},
+  {id:202, img:"img/Screenshot (440).png", title:"Giant Teddy Bear 65 cm", price:"₦91000", badge:"NEW ARRIVAL"},
+  {id:203, img:"img/Screenshot (441).png", title:"Plush Teddy Bear 105 cm", price:"₦140000", badge:"BEST SELLER"},
+  {id:204, img:"img/Screenshot (442).png", title:"Heart-Shaped Love Pillow", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:205, img:"img/Screenshot (443).png", title:"Customizable T-Shirt", price:"₦65000", badge:"CUSTOM-MADE"},
+  {id:206, img:"img/Screenshot (444).png", title:"Custom Photo T-Shirt", price:"₦63000", badge:"CUSTOM-MADE"},
+  {id:207, img:"img/Screenshot (445).png", title:"Polo Shirt ( with customization 35000", price:"₦60000", badge:"BEST SELLER"},
+  {id:208, img:"img/Screenshot (446).png", title:"Customized Irregular Pillow", price:"₦68000", badge:"PERSONALIZED"},
+  {id:209, img:"img/Screenshot (447).png", title:"Double-Sided Custom Pillow", price:"₦65000", badge:"PERSONALIZED GIFT"},
+  {id:210, img:"img/Screenshot (448).png", title:"Customizable Blanket", price:"₦68000", badge:"PERSONALIZED GIFT"},
+  {id:211, img:"img/Screenshot (449).png", title:"Customized photo blanket", price:"₦68000", badge:"PERSONALIZED GIFT"},
+  {id:212, img:"img/Screenshot (450).png", title:"Customizable Mug", price:"₦63000", badge:"PERSONALIZED GIFT"},
+  {id:213, img:"img/Screenshot (451).png", title:"Personalized Magic Mug", price:"₦60000", badge:"PERSONALIZED GIFT"},
+  {id:214, img:"img/Screenshot (452).png", title:"Men's Accessory Gift Set", price:"₦66000", badge:"PERSONALIZED GIFT"},
+  {id:215, img:"img/Screenshot (453).png", title:"Hikun Wristwatch and Bracelet Set", price:"₦70000", badge:"PERSONALIZED GIFT"},
+  {id:216, img:"img/Screenshot (454).png", title:"Men's Luxury Gift Set", price:"₦6630000", badge:"NEW ARRIVAL"},
+  {id:217, img:"img/Screenshot (455).png", title:"EKPU D79 Mini Smartwatch Set", price:"₦46500", badge:"PREMIUM QUALITY"},
+  {id:218, img:"img/Screenshot (456).png", title:"Luxury Gold Watch", price:"₦75000", badge:"NEW ARRIVAL"},
+  {id:219, img:"img/Screenshot (457).png", title:"Customized Magic Mug", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:220, img:"img/Screenshot (458).png", title:"Butterfly Jewelry and Watch Set", price:"₦45000", badge:"PERSONALIZED GIFT"},
+  {id:221, img:"img/Screenshot (459).png", title:"tomi Luxury Men's Accessory Set", price:"₦60500", badge:"PERSONALIZED GIFT"},
+  {id:222, img:"img/Screenshot (460).png", title:"Luxury Men's Gift Set", price:"₦70000", badge:"PERSONALIZED GIFT"},
+  {id:223, img:"img/Screenshot (461).png", title:"Men's Accessory Gift Set", price:"₦75000", badge:"TOP PICK"},
+  {id:224, img:"img/Screenshot (462).png", title:"Kingseven Sunglasses", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:225, img:"img/Screenshot (463).png", title:"Elegant Blue Gemstone Jewelry Set", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:226, img:"img/Screenshot (464).png", title:"Elegant Jewelry Set", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:227, img:"img/Screenshot (465).png", title:"Luxury Wallet and Belt Gift Set", price:"₦100000", badge:"LIMITED EDITION"},
+  {id:228, img:"img/Screenshot (466).png", title:"Elegant Gold-Plated Jewelry Set with Watch", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:229, img:"img/Screenshot (467).png", title:"OLEVS Women's Luxury set", price:"₦120000", badge:"NEW ARRIVAL"},
+  {id:230, img:"img/Screenshot (468).png", title:"Luxury Jewelry Gift Set", price:"₦75000", badge:"LIMITED EDITION"},
+  {id:231, img:"img/Screenshot (469).png", title:"Gold Package for Him", price:"₦110000", badge:"LUXURIOUS SET"},
+  {id:232, img:"img/Screenshot (470).png", title:"Oulm Dual Dial Wristwatch", price:"₦66000", badge:"NEWEST ARRIVAL"},
+  {id:233, img:"img/Screenshot (471).png", title:"Men's Watch Light Luxury Brand Wine Barrel dial Fashionable Night Glow Sports Watch Calendar Clock Reloj L146", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:234, img:"img/Screenshot (472).png", title:"LED Digital Watch", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:235, img:"img/Screenshot (473).png", title:"Men's Luxury Watches", price:"₦120000", badge:"NEW ARRIVAL"},
+  {id:236, img:"img/Screenshot (474).png", title:"BINGBONG Futuristic Watch", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:237, img:"img/Screenshot (475).png", title:"Men's Luxury Watch", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:238, img:"img/Screenshot (476).png", title:"Poedagar Luxury Watch", price:"₦73000", badge:"NEW ARRIVAL"},
+  {id:239, img:"img/Screenshot (477).png", title:"new watches CURREN Luxury Brand Men Watch Leather Strap Fashion Quartz-Watch Casual Sports Wristwatch Date Clock Relojes 8225", price:"₦85000", badge:"NEW ARRIVAL"},
+  {id:240, img:"img/Screenshot (478).png", title:"6PCS Set Luxury Watch Women Ring, Necklace, Earrings, Wristwatch", price:"₦67000", badge:"NEW ARRIVAL"},
+  {id:241, img:"img/Screenshot (479).png", title:"Android smart watch for kids", price:"₦57000", badge:"NEW RELEASE"},
+  {id:242, img:"img/Screenshot (480).png", title:"STRYVE Men’s digital sport watch available in different colors", price:"₦66000", badge:"NEW ARRIVAL"},
+  {id:243, img:"img/Screenshot (717).png", title:"3pcs set watch, necklace and bracelet (doesn’t come with box)", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:244, img:"img/Screenshot (720).png", title:"Leather Wrist Watch & 4 Braided Bracelet (NO BOX)", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:245, img:"img/Screenshot (721).png", title:"Cigarettes Men’s Watch", price:"₦65000", badge:"EXCLUSIVE"},
+  {id:246, img:"img/Screenshot (722).png", title:"Gold and Black Quartz Watch", price:"₦65000", badge:"NEW ARRIVAL"},
+  {id:247, img:"img/Screenshot (723).png", title:"Women's Diamond Watch and Bracelet Set", price:"₦60000", badge:"NEW ARRIVAL"},
+  {id:248, img:"img/Screenshot (724).png", title:"Quartz men watch", price:"₦53000", badge:"NEW ARRIVAL"},
+  {id:249, img:"img/Screenshot (725).png", title:"Men's Silver Watch and Bracelet Set", price:"₦63000", badge:"BEST SELLERS"},
+  {id:250, img:"img/Screenshot (726).png", title:"Diamond and Pink Gemstone Ring", price:"₦58000", badge:"NEW ARRIVAL"},
+  {id:251, img:"img/Screenshot (727).png", title:"Elegant Silver Diamond Ring", price:"₦55000", badge:"NEW ARRIVAL"},
+  {id:252, img:"img/Screenshot (490).png", title:"Pear-Shaped Diamond Ring", price:"₦56000", badge:"NEW ARRIVAL"},
+  {id:253, img:"img/Screenshot (491).png", title:"Gold Ring", price:"₦45000", badge:"NEW ARRIVAL"},
+  {id:254, img:"img/Screenshot (492).png", title:"Blue Sapphire Ring", price:"₦58000", badge:"NEW ARRIVAL"},
+  {id:255, img:"img/Screenshot (493).png", title:"Spinner Ring", price:"₦45000", badge:"PREMIUM QUALITY"},
+  {id:256, img:"img/Screenshot (494).png", title:"Silver Diamond Ring", price:"₦46000", badge:"NEW ARRIVAL"},
+  {id:257, img:"img/Screenshot (495).png", title:"Elegant Metal Rings Collection", price:"₦45000", badge:"NEW ARRIVAL"},
+  {id:258, img:"img/Screenshot (496).png", title:"Elegant Black Diamond Ring", price:"₦47000", badge:"EXCLUSIVE"},
+  {id:259, img:"img/Screenshot (497).png", title:"Diamond Encrusted Ring", price:"₦50000", badge:"LUXURY"},
+  {id:260, img:"img/Screenshot (498).png", title:"Diamond Engagement and Wedding Ring Set", price:"₦55000", badge:"NEW ARRIVAL"},
+
+
+
+
+
+];
+
+
+const perPage = 20;
+let currentPage = 1;
+
+const grid = document.getElementById("productsGrid");
+const pagination = document.getElementById("pagination");
+
+function renderProducts() {
+  grid.innerHTML = "";
+
+  const start = (currentPage - 1) * perPage;
+  const pageProducts = products.slice(start, start + perPage);
+
+  pageProducts.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+
+    const badgeHTML = p.badge ? `<div class="product-badge">${p.badge}</div>` : "";
+
+    card.innerHTML = `
+      ${badgeHTML}
+      <img src="${p.img}" alt="${p.title}">
+      <div class="product-title">${p.title}</div>
+      <div class="product-price">${p.price}</div>
+    `;
+
+
+     // Make card clickable: go to product details page
+    card.onclick = () => {
+      window.location.href = `product.html?id=${p.id}`;
+    };
+
+    grid.appendChild(card);
+  });
+}
+
+
+
+
+function renderPagination() {
+  pagination.innerHTML = "";
+
+  const pageCount = Math.ceil(products.length / perPage);
+  if (pageCount <= 1) return;
+
+  const prev = document.createElement("button");
+  prev.innerHTML = "‹";
+  prev.onclick = () => {
+    if (currentPage > 1) {
+      currentPage--;
+      update();
+    }
+  };
+  pagination.appendChild(prev);
+
+  function addPage(num) {
+    const btn = document.createElement("button");
+    btn.textContent = num;
+
+    if (num === currentPage) btn.classList.add("active");
+
+    btn.onclick = () => {
+      currentPage = num;
+      update();
+    };
+
+    pagination.appendChild(btn);
+  }
+
+  function addDots() {
+    const span = document.createElement("span");
+    span.textContent = "...";
+    pagination.appendChild(span);
+  }
+
+  if (pageCount <= 10) {
+    for (let i = 1; i <= pageCount; i++) addPage(i);
+  } else {
+    for (let i = 1; i <= 8; i++) addPage(i);
+
+    addDots();
+
+    for (let i = pageCount - 1; i <= pageCount; i++) addPage(i);
+  }
+
+  const next = document.createElement("button");
+  next.innerHTML = "›";
+  next.onclick = () => {
+    if (currentPage < pageCount) {
+      currentPage++;
+      update();
+    }
+  };
+
+  pagination.appendChild(next);
+}
+
+function update() {
+  renderProducts();
+  renderPagination();
+}
+
+update();
+</script>
+
+<!-- <script>
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+
+    if (hamburger.textContent === "☰") {
+      hamburger.textContent = "✖";
+    } else {
+      hamburger.textContent = "☰";
+    }
+  });
+</script>
+
+
+<script>
+  const openCart = document.getElementById("openCart");
+  const closeCart = document.getElementById("closeCart");
+  const cartSidebar = document.getElementById("cartSidebar");
+  const cartOverlay = document.getElementById("cartOverlay");
+
+  openCart.addEventListener("click", () => {
+    cartSidebar.classList.add("active");
+    cartOverlay.classList.add("active");
+  });
+
+  closeCart.addEventListener("click", () => {
+    cartSidebar.classList.remove("active");
+    cartOverlay.classList.remove("active");
+  });
+
+  cartOverlay.addEventListener("click", () => {
+    cartSidebar.classList.remove("active");
+    cartOverlay.classList.remove("active");
+  });
+</script> -->
+
+</body>
+</html>

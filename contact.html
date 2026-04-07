@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carlos Delivery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  ALL ORDERS GOING TO USA SHOULD PLS CONFIRM THE PRICE ON MY WHATSAPP BEFORE SENDING
+</div>
+
+<!-- NAVBAR -->
+ <header class="header">
+  <div class="nav-box"> 
+
+    
+
+    <div class="logo">
+  <img src="img/planet.jpg" alt="Carlos Delivery">
+  <span class="logo-text">SAFEWAY DELIVERY</span>
+</div>
+
+
+   
+
+
+
+
+
+<!-- HAMBURGER (MOBILE) -->
+    <div class="hamburger" id="hamburger">☰</div>
+
+
+
+     <nav class="menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="shop.html" >Shop</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+
+  
+  <div class="customized">
+    <span class="custom-title">
+      non customized product <span class="arrow">▾</span>
+    </span>
+    <div class="custom-sub">
+      <a href="keys.html">keys</a>
+      <a href="perfumes.html">perfumes</a>
+      <a href="necklaces.html">necklaces</a>
+      <a href="teddybears.html" class="active">teddy bears</a>
+      <a href="wristwatches.html">wristwatches</a>
+      <a href="box.html">box sets</a>
+      <a href="flowers.html">flowers</a>
+      <a href="handbags.html">handbags</a>
+      <a href="bracelet.html">bracelets</a>
+      <a href="underwears.html">underwears</a>
+      <a href="rings.html">rings</a>
+    </div>
+  </div>
+
+  
+  
+
+    <div class="customized">
+  <span class="custom-title">
+    customized product <span class="arrow">▾</span>
+  </span>
+
+  <div class="custom-sub">
+    <a href="letter.html">letter</a>
+    <a href="customizedbracelet.html">customized bracelets</a>
+    <a href="document.html">cards and documents</a>
+    <a href="caps.html">caps</a>
+    <a href="customizednecklaces.html">customized necklaces</a>
+    <a href="frame.html">frame</a>
+    <a href="pillow.html">pillow and blankets</a>
+    <a href="polo.html">polo</a>
+    <a href="mug.html">mug</a>
+  </div>
+</div>
+
+<div class="custom-menu-links"> 
+  <a href="eatable.html">eatable</a>
+  <a href="vip.html">vip</a>
+</div>
+
+   
+</nav>  
+
+
+
+
+
+
+  <div class="cart" id="openCart" style="position: relative; cursor: pointer;">
+  <svg
+    width="30"
+    height="30"
+    viewBox="0 0 24 24"
+    fill="black"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M6 6V5a6 6 0 0 1 12 0v1h3l-1.5 16.5a2 2 0 0 1-2 1.5H6.5a2 2 0 0 1-2-1.5L3 6h3zm2 0h8V5a4 4 0 0 0-8 0v1z"/>
+  </svg>
+  <span id="cartCount" class="cart-badge">0</span>
+</div>
+
+
+
+
+  </div>
+
+  <!-- Overlay -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+  
+  <div class="cart-header">
+    <h2>Shopping bag</h2>
+    <button class="close-cart" id="closeCart">&times;</button>
+  </div>
+
+  <!-- <div class="cart-body" id="cartBody">
+    <p class="empty-text">Shopping bag is empty</p>
+  </div> -->
+  <div class="cart-body" id="cartBody">
+    <p class="empty-text">Shopping bag is empty</p>
+</div>
+<div class="cart-footer" style="padding: 20px; border-top: 1px solid #eee;">
+    <h3>Total: <span id="cartTotal">0.00</span></h3>
+</div>
+<button id="checkoutBtn" style="width: 100%; background-color: #3b82f6; color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      Checkout 
+      <i class="fa-solid fa-lock" style="font-size: 12px;"></i>
+    </button>
+    <p style="text-align: center; font-size: 12px; color: #888; margin-top: 10px;">
+      <i class="fa-solid fa-shield-halved"></i> Secure checkout
+    </p>
+
+</div>
+</header> 
+
+<section class="contact-section">
+
+<div class="contact-header">
+<h1>Contact Us for Global Deliveries</h1>
+<p>Reach out for gift item delivery assistance worldwide anytime!</p>
+</div>
+
+<div class="contact-wrapper">
+
+<div class="contact-card" id="formContainer">
+
+<form id="contactForm">
+
+<label>Enter your first name</label>
+<input type="text" id="name" placeholder="Your first name here" required>
+
+<label>Enter your email address*</label>
+<input type="email" id="email" placeholder="Your email address here" required>
+
+<label>Enter your message here*</label>
+<textarea id="message" placeholder="Your message or inquiry" required></textarea>
+
+<button type="submit" class="submit-btn">
+Submit your request now
+</button>
+
+</form>
+
+<div id="successMessage" class="success-message">
+Thank you for your submission
+</div>
+</div>
+
+
+
+
+
+<div class="contact-image">
+<img src="img/Screenshot (755).png">
+</div>
+
+</div>
+
+</section>
+
+<section class="location-section">
+    <div class="container">
+        <div class="location-content">
+            <h1>Our Location</h1>
+            <p class="description">
+                safe Delivery operates globally, delivering gifts including jewelry, electronics, toys, perfumes, and more to customers worldwide.
+            </p>
+            
+            <div class="info-block">
+                <p class="label">Global</p>
+                <p>Worldwide Shipping Available Here</p>
+            </div>
+
+            <div class="info-block">
+                <p class="label">Hours</p>
+                <p>24/7 Service</p>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <div class="map-wrapper">
+                <a href="#" class="map-btn">Open in Maps <span class="external-icon">↗</span></a>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.3323420824424!2d-72.5222045!3d42.1431057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e6e66e69666667%3A0x6a66666666666666!2sSixteen%20Acres%2C%20Springfield%2C%20MA!5e0!3m2!1sen!2sus!4v1711650000000" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- IMAGE -->
+<div class="contact-image">
+<img src="img/gift.jpg" alt="Gift">
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<a href="https://wa.me/2349063479568" class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<footer class="footer">
+
+<div class="footer-top">
+
+<div class="footer-col left-col">
+
+<h3>Gifts</h3>
+
+<p>Delivering joy with global gift items online.</p>
+
+<div class="social-icons">
+<i class="fab fa-instagram"></i>
+<i class="fab fa-tiktok"></i>
+</div>
+
+<span class="copyright">
+© 2026. All rights reserved.
+</span>
+
+<div class="footer-gallery">
+<img src="img/Screenshot (173).png">
+<img src="img/Screenshot (174).png">
+<img src="img/Screenshot (175).png">
+<img src="img/Screenshot (176).png">
+<img src="img/Screenshot (177).png">
+<img src="img/Screenshot (178).png">
+<img src="img/Screenshot (179).png">
+<img src="img/Screenshot (180).png">
+</div>
+
+</div>
+
+<div class="footer-col">
+<h4>SHOP</h4>
+<p>+2348159933819</p>
+<p>+2349029439036</p>
+</div>
+
+<div class="footer-col">
+
+<h4>GLOBAL</h4>
+
+<p>Enter your email address</p>
+
+<input type="email" placeholder="Your email for updates">
+
+<button class="footer-btn">
+Submit your request now
+</button>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="main.js"></script>
+<script src="product.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+(function(){
+emailjs.init("YOUR_PUBLIC_KEY");
+})();
+
+document.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+emailjs.send("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",{
+
+name: document.getElementById("name").value,
+email: document.getElementById("email").value,
+message: document.getElementById("message").value
+
+}).then(function(){
+
+document.getElementById("contactForm").style.display="none";
+document.getElementById("successMessage").style.display="block";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

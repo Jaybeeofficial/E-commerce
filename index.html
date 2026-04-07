@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Safe Delivery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  ALL ORDERS GOING TO USA SHOULD PLS CONFIRM THE PRICE ON MY WHATSAPP BEFORE SENDING
+</div>
+
+<!-- NAVBAR -->
+ <header class="header">
+  <div class="nav-box">
+
+    
+
+    <div class="logo">
+  <img src="img/planet.jpg" alt="Carlos Delivery">
+  <span class="logo-text">SAFEWAY DELIVERY</span>
+</div>
+
+
+   
+
+
+
+
+
+<!-- HAMBURGER (MOBILE) -->
+    <div class="hamburger" id="hamburger">☰</div>
+
+
+
+     <nav class="menu" id="menu">
+  <a href="index.html" class="active">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+
+  
+  <div class="customized">
+    <span class="custom-title">
+      non customized product <span class="arrow">▾</span>
+    </span>
+    <div class="custom-sub">
+      <a href="keys.html">keys</a>
+      <a href="perfumes.html">perfumes</a>
+      <a href="necklaces.html">necklaces</a>
+      <a href="teddybears.html">teddy bears</a>
+      <a href="wristwatches.html">wristwatches</a>
+      <a href="box.html">box sets</a>
+      <a href="flowers.html">flowers</a>
+      <a href="handbags.html">handbags</a>
+      <a href="bracelet.html">bracelets</a>
+      <a href="underwears.html">underwears</a>
+      <a href="rings.html">rings</a>
+    </div>
+  </div>
+
+  
+  
+
+    <div class="customized">
+  <span class="custom-title">
+    customized product <span class="arrow">▾</span>
+  </span>
+
+  <div class="custom-sub">
+    <a href="letter.html">letter</a>
+    <a href="customizedbracelet.html">customized bracelets</a>
+    <a href="document.html">cards and documents</a>
+    <a href="caps.html">caps</a>
+    <a href="customizednecklaces.html">customized necklaces</a>
+    <a href="frame.html">frame</a>
+    <a href="pillow.html">pillow and blankets</a>
+    <a href="polo.html">polo</a>
+    <a href="mug.html">mug</a>
+  </div>
+</div>
+
+<div class="custom-menu-links"> 
+  <a href="eatable.html">eatable</a>
+  <a href="vip.html">vip</a>
+</div>
+
+   
+</nav>  
+
+
+
+
+
+
+  <div class="cart" id="openCart" style="position: relative; cursor: pointer;">
+  <svg
+    width="30"
+    height="30"
+    viewBox="0 0 24 24"
+    fill="black"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M6 6V5a6 6 0 0 1 12 0v1h3l-1.5 16.5a2 2 0 0 1-2 1.5H6.5a2 2 0 0 1-2-1.5L3 6h3zm2 0h8V5a4 4 0 0 0-8 0v1z"/>
+  </svg>
+  <span id="cartCount" class="cart-badge">0</span>
+</div>
+
+
+
+
+  </div>
+
+  <!-- Overlay -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+  
+  <div class="cart-header">
+    <h2>Shopping bag</h2>
+    <button class="close-cart" id="closeCart">&times;</button>
+  </div>
+
+  
+  <div class="cart-body" id="cartBody">
+    <p class="empty-text">Shopping bag is empty</p>
+</div>
+<div class="cart-footer" style="padding: 20px; border-top: 1px solid #eee;">
+    <h3>Total: <span id="cartTotal">0.00</span></h3>
+</div>
+<button id="checkoutBtn" style="width: 100%; background-color: #3b82f6; color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      Checkout 
+      <i class="fa-solid fa-lock" style="font-size: 12px;"></i>
+    </button>
+    <p style="text-align: center; font-size: 12px; color: #888; margin-top: 10px;">
+      <i class="fa-solid fa-shield-halved"></i> Secure checkout
+    </p>
+
+</div>
+</header> 
+
+
+
+
+<!-- HERO -->
+
+
+
+
+<section class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="img/mixkit-couple-opening-a-package-with-an-alarm-clock-42122-full-hd.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <!-- Top group -->
+    <div class="top-group">
+      <h1>Global Gift Delivery</h1>
+      <div class="search">
+        <input type="text" placeholder="Search products">
+      </div>
+    </div>
+
+    <!-- Bottom group -->
+    <div class="bottom-group">
+      <p>
+        Explore our wide range of gifts including jewelry, electronics,
+        toys, and more delivered worldwide.
+      </p>
+      <button>Shop</button>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="gift-section">
+  <p class="shop-now">SHOP NOW</p>
+  <h2 class="gift-title">Gift Items</h2>
+
+  <div class="gift-grid">
+
+    <!-- 1 -->
+    <div class="gift-card">
+      <img src="img/Screenshot (147).png" alt="">
+      <div class="gift-content">
+        <h3>ring</h3>
+        <p>Explore our stunning range of exquisite jewelry pieces.</p>
+        <button class="gift-btn">View</button>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="gift-card">
+      <img src="img/Screenshot (148).png" alt="">
+      <div class="gift-content">
+        <h3>flower</h3>
+        <p>Express your feelings with customized love letters, a heartfelt way to send your emotions to your loved ones.</p>
+        <button class="gift-btn">Explore</button>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="gift-card">
+      <img src="img/Screenshot (150).png" alt="">
+      <div class="gift-content">
+        <h3>pizza</h3>
+        <p>Explore our delicious pizza with very fast delivery.</p>
+        <button class="gift-btn">View</button>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="gift-card">
+      <img src="img/Screenshot (151).png" alt="">
+      <div class="gift-content">
+        <h3>love letter</h3>
+        <p>Explore our exquisite collection of flowers, each bloom crafted to inspire and celebrate life's beautiful moments.</p>
+        <button class="gift-btn">View</button>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="gift-card">
+      <img src="img/Screenshot (152).png" alt="">
+      <div class="gift-content">
+        <h3>vip product</h3>
+        <p>Discover the allure of exquisite luxury with our exclusive collection of VIP real gold and diamond jewelry. Our carefully curated selection is designed to captivate and inspire, providing you with the finest pieces that exude elegance and sophistication. </p>
+        <button class="gift-btn">Explore</button>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="gift-card">
+      <img src="img/Screenshot (153).png" alt="">
+      <div class="gift-content">
+        <h3>LED Acrylic Night Lamp</h3>
+        <p>lluminate your moments with our enchanting LED Acrylic Night Lamp. This elegant lamp showcases a heartfelt message for your girlfriend.</p>
+        <button class="gift-btn">Explore</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="gift-section">
+  <p class="shop-now">SHOP NOW</p>
+  <h2 class="gift-title">Gift Items</h2>
+
+  <div class="gift-grid">
+
+    <!-- 1 -->
+    <div class="gift-card">
+      <img src="img/Screenshot (155).png" alt="">
+      <div class="gift-content">
+        <h3>teady bears</h3>
+        <p>"Discover our adorable teddy bear collection, perfect for cuddles and heartfelt moments."</p>
+        <button class="gift-btn">View</button>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="gift-card">
+      <img src="img/Screenshot (156).png" alt="">
+      <div class="gift-content">
+        <h3>frame</h3>
+        <p>"Explore our timeless frames, designed to preserve and showcase your cherished memories."</p>
+        <button class="gift-btn">Explore</button>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="gift-card">
+      <img src="img/Screenshot (157).png" alt="">
+      <div class="gift-content">
+        <h3>membership card</h3>
+        <p>"membership card customization delivered straight to your doorstep".</p>
+        <button class="gift-btn">Customize</button>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="gift-card">
+      <img src="img/Screenshot (160).png" alt="">
+      <div class="gift-content">
+        <h3>customized necklace</h3>
+        <p>"Create a personalized necklace, a heartfelt gift to send to your loved ones."</p>
+        <button class="gift-btn">Shop Now</button>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="gift-card">
+      <img src="img/Screenshot (161).png" alt="">
+      <div class="gift-content">
+        <h3>car key</h3>
+        <p>"Send a practical and stylish car key to your loved ones, combining functionality with a thoughtful touch."</p>
+        <button class="gift-btn">View</button>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="gift-card">
+      <img src="img/Screenshot (162).png" alt="">
+      <div class="gift-content">
+        <h3>box set</h3>
+        <p>"Send a premium box set to your loved ones, offering a collection of carefully curated items in one elegant package."</p>
+        <button class="gift-btn">Explore</button>
+      </div>
+    </div>
+
+    <div class="gift-card">
+      <img src="img/Screenshot (163).png" alt="">
+      <div class="gift-content">
+        <h3>underwears</h3>
+        <p>"Send comfort and style with our premium underwear, the perfect gift for your loved ones."</p>
+        <button class="gift-btn">Explore</button>
+      </div>
+    </div>
+
+    <div class="gift-card">
+      <img src="img/Screenshot (164).png" alt="">
+      <div class="gift-content">
+        <h3>customized cap</h3>
+        <p>"Design a custom cap, the perfect way to send a personalized gift to your loved ones."</p>
+        <button class="gift-btn">Customize</button>
+      </div>
+    </div>
+
+    <div class="gift-card">
+      <img src="img/Screenshot (166).png" alt="">
+      <div class="gift-content">
+        <h3>wrist watch</h3>
+        <p>"Send a timeless gift with our elegant wristwatches, a perfect gesture for your loved ones."</p>
+        <button class="gift-btn">Explore</button>
+      </div>
+    </div>
+
+    <div class="gift-card">
+      <img src="img/Screenshot (167).png" alt="">
+      <div class="gift-content">
+        <h3>perfumes</h3>
+        <p>"Send a signature scent with our luxurious perfumes, the perfect gift to delight your loved ones."</p>
+        <button class="gift-btn">View</button>
+      </div>
+    </div>
+
+    <div class="gift-card">
+      <img src="img/Screenshot (168).png" alt="">
+      <div class="gift-content">
+        <h3>Bracelets</h3>
+        <p>"Send a symbol of elegance with our beautiful bracelets, a perfect gift for your loved ones."</p>
+        <button class="gift-btn">View</button>
+      </div>
+    </div>
+
+    <div class="gift-card">
+      <img src="img/Screenshot (169).png" alt="">
+      <div class="gift-content">
+        <h3>Customized Polo</h3>
+        <p>"Create a unique phone case with personalized images, the perfect way to send a meaningful gift to your loved ones."</p>
+        <button class="gift-btn">Customize</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="testimonial-section">
+
+  <div class="testimonial-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="testimonial-image">
+      <img src="img/Screenshot (170).png" alt="Gift Basket">
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="testimonial-content">
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <p class="testimonial-text">
+        Safeway Delivery made my gift shopping easy and fun!
+        Fast delivery and great selection of items.
+      </p>
+
+      <div class="testimonial-user">
+        <img src="img/Screenshot (171).png" alt="User">
+        <h4>Emma Smith</h4>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="welcome-section">
+  <div class="welcome-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="welcome-text">
+      <h1>
+        Welcome to Safeway <br>
+        Delivery
+      </h1>
+
+      <p>
+        Your global destination for unique gifts, including jewelry,
+        electronics, toys, perfumes, wristwatches, handbags, and car
+        keys, delivered right to your doorstep, anywhere in the world.
+      </p>
+
+      <div class="welcome-stats">
+        <div class="stat">
+          <h2>150+</h2>
+          <span>Global reach</span>
+        </div>
+
+        <div class="stat">
+          <h2>150000</h2>
+          <span>Trusted by many</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="welcome-image">
+      <img src="img/Screenshot (172).png" alt="Welcome Image">
+    </div>
+
+  </div>
+</section>
+
+<a href="https://wa.me/2349063479568" class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+
+<footer class="footer">
+
+  <div class="footer-top">
+
+    <!-- LEFT -->
+    <div class="footer-col left-col">
+      <h3>Gifts</h3>
+      <p>Delivering joy with global gift items online.</p>
+
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-tiktok"></i>
+      </div>
+
+      <span class="copyright">
+        © 2026. All rights reserved.
+      </span>
+
+      <!-- IMAGE GRID (NOW INSIDE LEFT COLUMN) -->
+      <div class="footer-gallery">
+        <img src="img/Screenshot (173).png">
+        <img src="img/Screenshot (174).png">
+        <img src="img/Screenshot (175).png">
+        <img src="img/Screenshot (176).png">
+        <img src="img/Screenshot (177).png">
+        <img src="img/Screenshot (178).png">
+        <img src="img/Screenshot (179).png">
+        <img src="img/Screenshot (180).png">
+      </div>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="footer-col">
+      <h4>SHOP</h4>
+      <p>+2348159933819</p>
+      <p>+2349029439036</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-col">
+      <h4>GLOBAL</h4>
+      <p>Enter your email address</p>
+
+      <input type="email" placeholder="Your email for updates">
+
+      <button class="footer-btn">
+        Submit your request now
+      </button>
+    </div>
+
+  </div>
+
+</footer>
+
+<div id="successModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; justify-content:center; align-items:center;">
+    <div style="background:white; padding:40px; border-radius:8px; text-align:center; max-width:400px; position:relative;">
+        <button onclick="closeModal()" style="position:absolute; top:10px; right:10px; border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+        <h1 style="font-size:24px;">Thank you for your order</h1>
+        <p style="color:#666; margin:20px 0;">Your order has been received.</p>
+        <button onclick="closeModal()" style="background:#3b82f6; color:white; border:none; padding:12px 30px; border-radius:4px; cursor:pointer;">Got it</button>
+    </div>
+</div>
+
+
+<script src="main.js"></script>
+
+
+
+
+
+
+
+<script>
+  const cards = document.querySelectorAll(".gift-card");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  cards.forEach((card, index) => {
+
+    // Assign different directions
+    if (index === 0) card.classList.add("from-left");
+    if (index === 1) card.classList.add("from-right");
+    if (index === 2) card.classList.add("from-left");
+    if (index === 3) card.classList.add("from-right");
+    if (index === 4) card.classList.add("from-left");
+    if (index === 5) card.classList.add("from-bottom");
+    if (index === 6) card.classList.add("from-bottom");
+    if (index === 7) card.classList.add("from-bottom");
+    if (index === 8) card.classList.add("from-left");
+    if (index === 9) card.classList.add("from-top");
+    if (index === 10) card.classList.add("from-left");
+    if (index === 11) card.classList.add("from-right");
+    if (index === 12) card.classList.add("from-bottom");
+    if (index === 13) card.classList.add("from-top");
+    if (index === 14) card.classList.add("from-bottom");
+    if (index === 15) card.classList.add("from-right");
+    if (index === 16) card.classList.add("from-bottom");
+    if (index === 17) card.classList.add("from-top");
+
+    observer.observe(card);
+  });
+</script>
+
+
+<script>
+    // Check if we just came from a successful checkout
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('order') === 'success') {
+        document.getElementById("successModal").style.display = "flex";
+    }
+
+    function closeModal() {
+        document.getElementById("successModal").style.display = "none";
+        // Clean the URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+</script>
+
+
+
+</body>
+</html>
