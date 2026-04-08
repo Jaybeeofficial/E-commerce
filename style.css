@@ -1762,8 +1762,162 @@ z-index:999;
     cursor: not-allowed;
     opacity: 0.8;
 }
-    
- 
+
+
+/* CONTACT LAYOUT */
+/* .contact-wrapper{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+} */
+
+/* MOBILE FIX */
+@media (max-width:768px){
+
+.contact-wrapper{
+flex-direction:column;
+padding:20px;
+}
+
+.contact-card{
+width:100%;
+}
+
+.contact-image{
+display:flex;
+justify-content:center;
+align-items:center;
+width:100%;
+margin-top:20px;
+}
+
+.contact-image img{
+width:90%;
+max-width:400px;
+height:auto;
+display:block;
+margin:auto;
+}
+
+.contact-header{
+text-align:center;
+padding:20px;
+}
+
+#contactForm input,
+#contactForm textarea{
+width:100%;
+}
+
+.submit-btn{
+width:100%;
+}
+
+}
+
+/* LOCATION SECTION MOBILE FIX */
+@media (max-width:768px){
+
+.location-section .container{
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:20px;
+}
+
+.location-content{
+width:100%;
+text-align:center;
+margin-bottom:20px;
+}
+
+.map-container{
+width:100%;
+display:flex;
+justify-content:center;
+}
+
+.map-wrapper{
+width:100%;
+max-width:500px;
+}
+
+.map-wrapper iframe{
+width:100%;
+height:300px;
+border-radius:10px;
+}
+
+.map-btn{
+display:inline-block;
+margin-bottom:10px;
+}
+
+}
+
+/* hide dropdown by default */
+.custom-sub{
+display:none;
+flex-direction:column;
+padding-left:10px;
+}
+
+/* show when active */
+.custom-sub.show{
+display:block;
+}
+
+/* mobile styling */
+@media (max-width:768px){
+
+.custom-title{
+display:flex;
+justify-content:space-between;
+align-items:center;
+cursor:pointer;
+padding:12px 0;
+font-weight:500;
+}
+
+.custom-sub a{
+display:block;
+padding:8px 0;
+font-size:14px;
+}
+
+}
+
+
+/* hide dropdown */
+.custom-sub{
+display:none;
+flex-direction:column;
+}
+
+/* show dropdown */
+.custom-sub.show{
+display:block;
+}
+
+/* arrow animation */
+.custom-title{
+cursor:pointer;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.custom-title .arrow{
+transition:0.3s;
+}
+
+/* arrow rotates when open */
+.custom-title.open .arrow{
+transform:rotate(180deg);
+}
+
+
 
 
  

@@ -147,3 +147,22 @@ window.removeFromCart = (index) => {
 };
 
 document.addEventListener("DOMContentLoaded", renderCart);
+
+
+
+
+document.querySelectorAll(".custom-title").forEach(title => {
+
+  title.addEventListener("click", function () {
+
+    const submenu = this.parentElement.querySelector(".custom-sub");
+
+    if(submenu.style.display === "block"){
+      submenu.style.display = "none";
+    }else{
+      submenu.style.display = "block";
+    }
+
+  });
+
+});
